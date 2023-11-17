@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: LearingCpp
+# Project: LearningCpp
 # Configurations: Debug
 # =============================================================================
 
@@ -41,35 +41,41 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /Users/aaron/CLionProjects/Learn-Cpp-Clion/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target LearingCPP
+# Object build statements for EXECUTABLE target LearningCpp
 
 
 #############################################
-# Order-only phony target for LearingCPP
+# Order-only phony target for LearningCpp
 
-build cmake_object_order_depends_target_LearingCPP: phony || CMakeFiles/LearingCPP.dir
+build cmake_object_order_depends_target_LearningCpp: phony || CMakeFiles/LearningCpp.dir
 
-build CMakeFiles/LearingCPP.dir/QSLLProject.cpp.o: CXX_COMPILER__LearingCPP_unscanned_Debug /Users/aaron/CLionProjects/Learn-Cpp-Clion/QSLLProject.cpp || cmake_object_order_depends_target_LearingCPP
-  DEP_FILE = CMakeFiles/LearingCPP.dir/QSLLProject.cpp.o.d
+build CMakeFiles/LearningCpp.dir/DataStuctureAssignment/InsertionSort.cpp.o: CXX_COMPILER__LearningCpp_unscanned_Debug /Users/aaron/CLionProjects/Learn-Cpp-Clion/DataStuctureAssignment/InsertionSort.cpp || cmake_object_order_depends_target_LearningCpp
+  DEP_FILE = CMakeFiles/LearningCpp.dir/DataStuctureAssignment/InsertionSort.cpp.o.d
   FLAGS = -Werror -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion -g -std=c++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/LearingCPP.dir
-  OBJECT_FILE_DIR = CMakeFiles/LearingCPP.dir
+  OBJECT_DIR = CMakeFiles/LearningCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/LearningCpp.dir/DataStuctureAssignment
+
+build CMakeFiles/LearningCpp.dir/DataStuctureAssignment/UnsortedVector.cpp.o: CXX_COMPILER__LearningCpp_unscanned_Debug /Users/aaron/CLionProjects/Learn-Cpp-Clion/DataStuctureAssignment/UnsortedVector.cpp || cmake_object_order_depends_target_LearningCpp
+  DEP_FILE = CMakeFiles/LearningCpp.dir/DataStuctureAssignment/UnsortedVector.cpp.o.d
+  FLAGS = -Werror -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion -g -std=c++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/LearningCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/LearningCpp.dir/DataStuctureAssignment
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target LearingCPP
+# Link build statements for EXECUTABLE target LearningCpp
 
 
 #############################################
-# Link the executable LearingCPP
+# Link the executable LearningCpp
 
-build LearingCPP: CXX_EXECUTABLE_LINKER__LearingCPP_Debug CMakeFiles/LearingCPP.dir/QSLLProject.cpp.o
+build LearningCpp: CXX_EXECUTABLE_LINKER__LearningCpp_Debug CMakeFiles/LearningCpp.dir/DataStuctureAssignment/InsertionSort.cpp.o CMakeFiles/LearningCpp.dir/DataStuctureAssignment/UnsortedVector.cpp.o
   FLAGS = -Werror -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk
-  OBJECT_DIR = CMakeFiles/LearingCPP.dir
+  OBJECT_DIR = CMakeFiles/LearningCpp.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = LearingCPP
-  TARGET_PDB = LearingCPP.dbg
+  TARGET_FILE = LearningCpp
+  TARGET_PDB = LearningCpp.dbg
 
 
 #############################################
@@ -105,7 +111,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/aaron/CLionProjects/Learn-Cpp-Clion/cmake-build-debug
 
-build all: phony LearingCPP
+build all: phony LearningCpp
 
 # =============================================================================
 # Built-in targets

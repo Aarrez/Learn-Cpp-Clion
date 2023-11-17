@@ -21,8 +21,6 @@ class GetRandomElementInArray
 public:
     T static RandomizeArray(T givenArray[], int index)
     {
-
-
         return givenArray;
     }
 };
@@ -70,12 +68,6 @@ public:
             }
         }
     }
-
-    void DepthFirstSearch(Node nodelist[], Node* firstNode, std::list<Node*> foundNodeList)
-    {
-
-    }
-
 ~Graph()
     {
         delete root;
