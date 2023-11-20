@@ -16,7 +16,6 @@ void InsertionSort::SortVector(std::vector<int>&vector)
     }
 }
 
-
 int main()
 {
     std::vector<int> vector_list;

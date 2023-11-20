@@ -9,9 +9,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror -Wall -Weffc++ -Wextra -Wconvers
 
 
 add_executable(LearningCpp
-        DataStuctureAssignment/InsertionSort.h
-        DataStuctureAssignment/InsertionSort.cpp
-        DataStuctureAssignment/UnsortedVector.cpp
-        DataStuctureAssignment/UnsortedVector.h
+        QuickSort.cpp
+        QuickSort.h
 
 )

@@ -49,17 +49,11 @@ cmake_ninja_workdir = /Users/aaron/CLionProjects/Learn-Cpp-Clion/cmake-build-deb
 
 build cmake_object_order_depends_target_LearningCpp: phony || CMakeFiles/LearningCpp.dir
 
-build CMakeFiles/LearningCpp.dir/DataStuctureAssignment/InsertionSort.cpp.o: CXX_COMPILER__LearningCpp_unscanned_Debug /Users/aaron/CLionProjects/Learn-Cpp-Clion/DataStuctureAssignment/InsertionSort.cpp || cmake_object_order_depends_target_LearningCpp
-  DEP_FILE = CMakeFiles/LearningCpp.dir/DataStuctureAssignment/InsertionSort.cpp.o.d
+build CMakeFiles/LearningCpp.dir/QuickSort.cpp.o: CXX_COMPILER__LearningCpp_unscanned_Debug /Users/aaron/CLionProjects/Learn-Cpp-Clion/QuickSort.cpp || cmake_object_order_depends_target_LearningCpp
+  DEP_FILE = CMakeFiles/LearningCpp.dir/QuickSort.cpp.o.d
   FLAGS = -Werror -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion -g -std=c++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/LearningCpp.dir
-  OBJECT_FILE_DIR = CMakeFiles/LearningCpp.dir/DataStuctureAssignment
-
-build CMakeFiles/LearningCpp.dir/DataStuctureAssignment/UnsortedVector.cpp.o: CXX_COMPILER__LearningCpp_unscanned_Debug /Users/aaron/CLionProjects/Learn-Cpp-Clion/DataStuctureAssignment/UnsortedVector.cpp || cmake_object_order_depends_target_LearningCpp
-  DEP_FILE = CMakeFiles/LearningCpp.dir/DataStuctureAssignment/UnsortedVector.cpp.o.d
-  FLAGS = -Werror -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion -g -std=c++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/LearningCpp.dir
-  OBJECT_FILE_DIR = CMakeFiles/LearningCpp.dir/DataStuctureAssignment
+  OBJECT_FILE_DIR = CMakeFiles/LearningCpp.dir
 
 
 # =============================================================================
@@ -69,7 +63,7 @@ build CMakeFiles/LearningCpp.dir/DataStuctureAssignment/UnsortedVector.cpp.o: CX
 #############################################
 # Link the executable LearningCpp
 
-build LearningCpp: CXX_EXECUTABLE_LINKER__LearningCpp_Debug CMakeFiles/LearningCpp.dir/DataStuctureAssignment/InsertionSort.cpp.o CMakeFiles/LearningCpp.dir/DataStuctureAssignment/UnsortedVector.cpp.o
+build LearningCpp: CXX_EXECUTABLE_LINKER__LearningCpp_Debug CMakeFiles/LearningCpp.dir/QuickSort.cpp.o
   FLAGS = -Werror -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk
   OBJECT_DIR = CMakeFiles/LearningCpp.dir
   POST_BUILD = :
