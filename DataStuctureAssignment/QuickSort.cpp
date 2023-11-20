@@ -41,11 +41,11 @@ void QSort :: quickSort(std::vector<int> &vector_list, const int hi, const int l
     }
 }
 
-
 int main()
 {
     std::vector<int> vector_list;
     QSort q_sort(vector_list, 100);
+    int i = vector_list[1];
     for(int i : vector_list)
     {
         std::cout << i << " ";
