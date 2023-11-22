@@ -4,24 +4,35 @@
 std::vector<int> CSort::CountSort(std::vector<int> input, int k)
 {
     std::vector<int> output;
-    output.resize(input.size() - 1);
+    output.resize(input.size());
+
     std::vector<int> count;
     count.resize(static_cast<size_t>(k + 1));
 
     for (int i = 0; i <= input.size() -1; ++i)
     {
-        count[input[i]] = count[input[i]] + 1;
+        count[input[i]]++;
     }
+    // for(int i: count)
+    // {
+    //     std::cout << i << " ";
+    // }
+    // std::cout << "\n" << count.size();
 
     for (int i = 1; i <= k; ++i)
     {
-        count[i] = count[i] + count[i-1];
+        count[i] += count[i-1];
     }
+    // for(int i: count)
+    // {
+    //     std::cout << i << " ";
+    // }
+    // std::cout << "\n" << count.size();
 
-    for (int i = input.size() - 1; i >= 0; --i)
+    for (int i = input.size() - 1; i >= 0; --i)// Some where here I am doing something wrong
     {
         count[input[i]] = count[input[i]] - 1;
-        output[count[i]] = input[i];
+        output[count[input[i]]] = input[i];
     }
     return output;
 }
@@ -29,8 +40,8 @@ std::vector<int> CSort::CountSort(std::vector<int> input, int k)
 
 int main()
 {
-    int amount = 20;
-    std::vector<int> vector_list;
+    int amount = 10000;
+    std::vector<int> vector_list {};
     for(int i = 0; i < amount - 1; i++)
     {
         int random = rand() % amount + 1;
@@ -41,9 +52,11 @@ int main()
         std::cout << i << " ";
     }
     std::cout << "\n" << "-----------------------" <<std::endl;
-    CSort csort;
+
     std::vector<int> some;
-    some = csort.CountSort(vector_list, amount);
+    CSort csort;
+
+    some = csort.CountSort(vector_list, 65535);
     for(int i: some)
     {
         std::cout << i << " ";
