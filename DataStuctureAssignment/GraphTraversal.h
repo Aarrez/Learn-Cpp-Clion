@@ -38,12 +38,23 @@ public:
         }
     }
 
-    static void AddAdjNode(const int weight, Node* parent ,Node* &toAdd)
+    void AddAdjNode()
     {
-        const auto node_adj = new adjNode;
-        node_adj->node = toAdd;
-        node_adj->weight = weight;
-       parent->neighbors.push_back(node_adj);
+        srand(static_cast<unsigned>(time(NULL)));
+        for (int i = 0; i < vectornode.size()-1; ++i)
+        {
+            for (int j = 0; j < vectornode.size()-1; ++j)
+            {
+                if(i != j)
+                {
+                    int weight = rand() % 3;
+                    const auto node_adj = new adjNode;
+                    node_adj->node = vectornode[j];
+                    node_adj->weight = weight;
+                    vectornode[i]->neighbors.push_back(node_adj);
+                }
+            }
+        }
     }
 
     ~Graph()
