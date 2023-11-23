@@ -5,24 +5,24 @@
 #define LEARNINGCPP_LANGUAGEMAP_H
 
 #include <vector>
-template<class T>
+template<typename T, typename U>
 struct Entry{
     int index;
     T name;
-    T value;
+    U value;
 };
 
-template<class T>
+template<class T, class U>
         class Map{
         private:
-            std::vector<Entry<T>> entryList;
+            std::vector<Entry<T, U>> entryList;
 
 public:
-    Map(T name, T value);
-    void Insert(T name,T value);
+    Map(T name, U value);
+    void Insert(T name,U value);
+    void RemoveByName(T name);
     T LookUpName(T name);
     T LookUpIndex(int index);
-    void RemoveByName(T name);
     int MapSize();
 };
 

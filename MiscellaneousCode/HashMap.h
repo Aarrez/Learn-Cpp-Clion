@@ -1,12 +1,18 @@
 #ifndef LEARNINGCPP_HASHMAP_H
 #define LEARNINGCPP_HASHMAP_H
 #include <iostream>
+ struct some
+{
+     some* date;
+     int id;
+};
 
+template<class T, class U>
 class LinkedListEntry{
 public:
-    LinkedListEntry(std::string key, std::string value);
-    std::string key;
-    std::string value;
+    LinkedListEntry(T key, U value);
+    T key;
+    U value;
     LinkedListEntry* next = nullptr;
     LinkedListEntry* Last(){
         if(next) return this;
@@ -16,17 +22,26 @@ public:
         return last;
     }
 };
-
+template<class T, class U>
 class MyHasMap{
 public:
-    void Initialize(int size);
-    void Insert(std::string key, std::string value);
-    std::string LookUp(std::string key);
-    void Remove(std::string key);
+    MyHasMap(int size)
+    {
+        this->size = size;
+        entries = new LinkedListEntry*[size];
+    }
+    void Insert(T key, U value);
+    U LookUp(T key);
+    void Remove(T key);
 private:
-    int HashFunciton(std::string key);
+    int HashFunciton(T key);
     int size;
-    LinkedListEntry** entries;
+    LinkedListEntry<T, U>** entries;
+
+    ~MyHasMap()
+    {
+        delete entries;
+    }
 };
 
 

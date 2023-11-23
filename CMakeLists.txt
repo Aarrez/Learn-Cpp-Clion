@@ -7,6 +7,6 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 
 add_executable(LearningCpp
-        DataStuctureAssignment/GraphTraversal.cpp
-        DataStuctureAssignment/GraphTraversal.h
+        MiscellaneousCode/HashMap.h
+        MiscellaneousCode/HashMap.cpp
 )

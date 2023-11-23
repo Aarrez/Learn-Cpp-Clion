@@ -1,65 +1,34 @@
-#include "main.h"
+#include "MergeSort.h"
 #include <iostream>
-
-std::vector<int> CSort::CountSort(std::vector<int> input, int k)
-{
-    std::vector<int> output;
-    output.resize(input.size());
-
-    std::vector<int> count;
-    count.resize(static_cast<size_t>(k + 1));
-
-    for (int i = 0; i <= input.size() -1; ++i)
-    {
-        count[input[i]]++;
-    }
-    // for(int i: count)
-    // {
-    //     std::cout << i << " ";
-    // }
-    // std::cout << "\n" << count.size();
-
-    for (int i = 1; i <= k; ++i)
-    {
-        count[i] += count[i-1];
-    }
-    // for(int i: count)
-    // {
-    //     std::cout << i << " ";
-    // }
-    // std::cout << "\n" << count.size();
-
-    for (int i = input.size() - 1; i >= 0; --i)// Some where here I am doing something wrong
-    {
-        count[input[i]] = count[input[i]] - 1;
-        output[count[input[i]]] = input[i];
-    }
-    return output;
-}
-
 
 int main()
 {
-    int amount = 10000;
-    std::vector<int> vector_list {};
-    for(int i = 0; i < amount - 1; i++)
+    std::vector<int> vector_list;
+    int amount {100};
+    unsigned seed = time(nullptr);
+    std::default_random_engine generator(seed);
+    std::uniform_int_distribution<int> distribution(0, amount);
+    vector_list.reserve(amount);
+    for (int i = 0; i < amount; ++i)
     {
-        int random = rand() % amount + 1;
-        vector_list.push_back(random);
+        vector_list.push_back(distribution(generator));
     }
-    for(int i : vector_list)
+    int iterations {10};
+    int sum {0};
+    for (int i = 0; i < iterations; ++i)
     {
-        std::cout << i << " ";
-    }
-    std::cout << "\n" << "-----------------------" <<std::endl;
+        auto start = std::chrono::high_resolution_clock::now();
+        std::vector<int> list = TopDownMSort::merge_sort(vector_list);
+        auto end = std::chrono::high_resolution_clock::now();
 
-    std::vector<int> some;
-    CSort csort;
-
-    some = csort.CountSort(vector_list, 65535);
-    for(int i: some)
-    {
-        std::cout << i << " ";
+        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+        sum += static_cast<int>(duration.count());
     }
+    int avrage = sum/iterations;
+
+
+    std::cout << "\n" <<"Time in microseconds: " << avrage;
+
+
     return 0;
 }
