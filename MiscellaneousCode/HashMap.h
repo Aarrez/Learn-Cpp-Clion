@@ -28,20 +28,22 @@ public:
     MyHasMap(int size)
     {
         this->size = size;
-        entries = new LinkedListEntry*[size];
+        entries = new LinkedListEntry<T, U>*[size];
     }
-    void Insert(T key, U value);
-    U LookUp(T key);
-    void Remove(T key);
-private:
-    int HashFunciton(T key);
-    int size;
-    LinkedListEntry<T, U>** entries;
-
     ~MyHasMap()
     {
         delete entries;
     }
+    void Insert(T key, U value);
+    U LookUp(T key);
+    void Remove(T key);
+    int HashFunciton(T key);
+private:
+
+    int size;
+    LinkedListEntry<T, U>** entries;
+
+
 };
 
 
