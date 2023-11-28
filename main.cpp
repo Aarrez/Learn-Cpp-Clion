@@ -1,7 +1,9 @@
+#include "main.h"
 #include <iostream>
+using namespace graph_space;
 
 int main()
 {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+        graphimport();
+        return 0;
 }

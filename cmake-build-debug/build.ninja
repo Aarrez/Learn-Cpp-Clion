@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: GraphClass
+# Project: GraphProject
 # Configurations: Debug
 # =============================================================================
 
@@ -41,38 +41,46 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /Users/aaron/CLionProjects/Graph/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target GraphClass
+# Object build statements for EXECUTABLE target GraphProject
 
 
 #############################################
-# Order-only phony target for GraphClass
+# Order-only phony target for GraphProject
 
-build cmake_object_order_depends_target_GraphClass: phony || CMakeFiles/GraphClass.dir
+build cmake_object_order_depends_target_GraphProject: phony || CMakeFiles/GraphProject.dir
 
-build CMakeFiles/GraphClass.dir/main.cpp.o: CXX_COMPILER__GraphClass_unscanned_Debug /Users/aaron/CLionProjects/Graph/main.cpp || cmake_object_order_depends_target_GraphClass
-  DEP_FILE = CMakeFiles/GraphClass.dir/main.cpp.o.d
+build CMakeFiles/GraphProject.dir/main.cpp.o: CXX_COMPILER__GraphProject_unscanned_Debug /Users/aaron/CLionProjects/Graph/main.cpp || cmake_object_order_depends_target_GraphProject
+  DEP_FILE = CMakeFiles/GraphProject.dir/main.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/GraphClass.dir
-  OBJECT_FILE_DIR = CMakeFiles/GraphClass.dir
-  TARGET_COMPILE_PDB = CMakeFiles/GraphClass.dir/
-  TARGET_PDB = GraphClass.pdb
+  OBJECT_DIR = CMakeFiles/GraphProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/GraphProject.dir
+  TARGET_COMPILE_PDB = CMakeFiles/GraphProject.dir/
+  TARGET_PDB = GraphProject.pdb
+
+build CMakeFiles/GraphProject.dir/GraphImport.cpp.o: CXX_COMPILER__GraphProject_unscanned_Debug /Users/aaron/CLionProjects/Graph/GraphImport.cpp || cmake_object_order_depends_target_GraphProject
+  DEP_FILE = CMakeFiles/GraphProject.dir/GraphImport.cpp.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/GraphProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/GraphProject.dir
+  TARGET_COMPILE_PDB = CMakeFiles/GraphProject.dir/
+  TARGET_PDB = GraphProject.pdb
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target GraphClass
+# Link build statements for EXECUTABLE target GraphProject
 
 
 #############################################
-# Link the executable GraphClass
+# Link the executable GraphProject
 
-build GraphClass: CXX_EXECUTABLE_LINKER__GraphClass_Debug CMakeFiles/GraphClass.dir/main.cpp.o
+build GraphProject: CXX_EXECUTABLE_LINKER__GraphProject_Debug CMakeFiles/GraphProject.dir/main.cpp.o CMakeFiles/GraphProject.dir/GraphImport.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk
-  OBJECT_DIR = CMakeFiles/GraphClass.dir
+  OBJECT_DIR = CMakeFiles/GraphProject.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/GraphClass.dir/
-  TARGET_FILE = GraphClass
-  TARGET_PDB = GraphClass.pdb
+  TARGET_COMPILE_PDB = CMakeFiles/GraphProject.dir/
+  TARGET_FILE = GraphProject
+  TARGET_PDB = GraphProject.pdb
 
 
 #############################################
@@ -108,7 +116,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/aaron/CLionProjects/Graph/cmake-build-debug
 
-build all: phony GraphClass
+build all: phony GraphProject
 
 # =============================================================================
 # Built-in targets
