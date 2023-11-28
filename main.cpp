@@ -1,9 +1,16 @@
 #include "main.h"
 #include <iostream>
+
 using namespace graph_space;
 
-int main()
+void graph_space::print()
 {
-        graphimport();
-        return 0;
+
 }
+
+
+// int main()
+// {
+//
+//     return 0;
+// }
