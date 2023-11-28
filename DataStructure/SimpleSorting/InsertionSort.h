@@ -2,7 +2,7 @@
 #define INSERTIONSORT_H
 #include <vector>
 
-namespace sortingAlgorithms
+namespace sorting_algorithms
 {
     class InsertionSort
     {

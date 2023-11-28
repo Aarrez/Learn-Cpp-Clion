@@ -1,5 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
+#include <iostream>
+
 //Simple sorting algorithms header files
 #include "SimpleSorting/SelectionSort.h"
 #include "SimpleSorting/BubbleSort.h"
@@ -13,11 +15,8 @@
 
 #include "UnsortedVector.h"
 
-namespace sortingAlgorithms
+namespace sorting_algorithms
 {
-
-
-
     int main();
 }
 

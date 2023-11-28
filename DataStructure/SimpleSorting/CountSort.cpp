@@ -1,7 +1,7 @@
 #include "CountSort.h"
 #include <iostream>
 
-namespace sortingAlgorithms
+namespace sorting_algorithms
 {
     std::vector<int> CountSortFunc(std::vector<int> vector_list, const int amount)
     {

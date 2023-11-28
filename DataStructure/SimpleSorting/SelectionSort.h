@@ -3,7 +3,7 @@
 #include <iostream>
 #include <algorithm>
 
-namespace sortingAlgorithms
+namespace sorting_algorithms
 {
     class SelectionSort
     {

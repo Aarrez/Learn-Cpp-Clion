@@ -2,7 +2,7 @@
 #define UNSORTEDVECTOR_H
 #include <random>
 
-namespace sortingAlgorithms
+namespace sorting_algorithms
 {
     class UnsortedIntVector
     {

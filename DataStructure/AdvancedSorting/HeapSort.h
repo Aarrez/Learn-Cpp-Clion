@@ -3,7 +3,7 @@
 #include <vector>
 #include <algorithm>
 
-namespace sortingAlgorithms
+namespace sorting_algorithms
 {
     class heap_sort
     {

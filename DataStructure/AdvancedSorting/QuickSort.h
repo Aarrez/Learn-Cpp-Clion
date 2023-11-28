@@ -2,7 +2,7 @@
 #define QUICKSORT_H
 #include <vector>
 
-namespace sortingAlgorithms
+namespace sorting_algorithms
 {
     class QSort
     {

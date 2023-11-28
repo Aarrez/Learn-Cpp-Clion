@@ -3,7 +3,7 @@
 #include <vector>
 #include <random>
 
-namespace sortingAlgorithms
+namespace sorting_algorithms
 {
     class MergeSort{
         static std::vector<int> merge(std::vector<int> &left, std::vector<int> &right)

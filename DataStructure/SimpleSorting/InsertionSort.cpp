@@ -1,7 +1,7 @@
 #include "InsertionSort.h"
 #include <iostream>
 
-namespace sortingAlgorithms
+namespace sorting_algorithms
 {
     std::vector<int> InsertionSortFunc(std::vector<int> vector_list)
     {

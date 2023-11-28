@@ -1,6 +1,6 @@
 #include "HeapSort.h"
 
-namespace sortingAlgorithms
+namespace sorting_algorithms
 {
     std::vector<int> HeapSortFunc(std::vector<int> vector_list, int amount)
     {

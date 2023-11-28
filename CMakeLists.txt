@@ -28,6 +28,4 @@ add_executable(SortingAlgorithms
         DataStructure/AdvancedSorting/QuickSort.h
 
         DataStructure/main.cpp
-
-
 )
