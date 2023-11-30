@@ -13,36 +13,12 @@ namespace graph_space
     {
         int id {0};
         bool isblocker {false};
-        node** adjecent {nullptr};
+        bool explored {false};
+        std::vector<std::shared_ptr<node>> adjecent;
         vector2 position {0, 0};
     };
 
-
-    class graph
-    {
-        std::vector<node*> nodelist_;
-    public:
-
-        explicit graph(std::vector<node*> &nodelist)
-        {
-            this->nodelist_ = nodelist;
-        }
-
-        void searchastar(node* first, node* goal);
-        void searchbreadthfirst(node* first, node* goal);
-        void searchdepthfirst(node* first, node* goal);
-        node* getbyid(int id)
-        {
-            return nodelist_[id];
-        }
-        ~graph()
-        {
-            for (auto i: nodelist_)
-            {
-                delete i;
-            }
-        };
-    };
-    graph graphimport();
+    std::vector<std::shared_ptr<node>> graphimport();
+    void addadjecentnodes(std::vector<std::shared_ptr<node>> &nodelist);
 }
 #endif //GRAPHIMPORT_H
