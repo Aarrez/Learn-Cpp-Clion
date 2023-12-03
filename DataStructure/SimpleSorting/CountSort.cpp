@@ -1,12 +1,11 @@
 #include "CountSort.h"
 #include <iostream>
 
-namespace sorting_algorithms
+namespace sorting_Algorithms
 {
-    std::vector<int> CountSortFunc(std::vector<int> vector_list, const int amount)
+    void count_sort_func(std::vector<int> &vector_list, const int amount)
     {
-        std::vector<int> result = countSort::CountSort(vector_list, amount);
+        vector_list = countSort::CountSort(vector_list, amount);
 
-        return result;
     }
 }

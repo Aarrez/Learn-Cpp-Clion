@@ -1,12 +1,10 @@
 #include "BubbleSort.h"
 #include <iostream>
 
-namespace sorting_algorithms
+namespace sorting_Algorithms
 {
-    std::vector<int> BubbleSortFunc(std::vector<int> vector_list)
+    void bubble_sort_func(std::vector<int> &vector_list)
     {
         BubbleSort::bubbleSort(vector_list);
-
-        return vector_list;
     }
 }

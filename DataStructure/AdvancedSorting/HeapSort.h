@@ -3,27 +3,27 @@
 #include <vector>
 #include <algorithm>
 
-namespace sorting_algorithms
+namespace sorting_Algorithms
 {
-    class heap_sort
+    class Heap_Sort
     {
-        int size;
-        void BuildMaxHeap(std::vector<int> &vector_list)
+        int size_;
+        void build_max_heap(std::vector<int> &vector_list)
         {
-            size = vector_list.size() -1;
-            int a = size/2;
+            size_ = vector_list.size() -1;
+            int a = size_/2;
             for(int i = a; i >= 0; i--)
             {
-                Heapify(vector_list, i);
+                heapify(vector_list, i);
             }
         }
 
-        void Heapify(std::vector<int> &vector_list , int i)
+        void heapify(std::vector<int> &vector_list ,const int i)
         {
             int left = 2 * i;
             int right = (2 * i) + 1;
             int max;
-            if(left <= size && vector_list[left] > vector_list[i])
+            if(left <= size_ && vector_list[left] > vector_list[i])
             {
                 max = left;
             }
@@ -32,7 +32,7 @@ namespace sorting_algorithms
                 max = i;
             }
 
-            if(right <= size && vector_list[right] > vector_list[max])
+            if(right <= size_ && vector_list[right] > vector_list[max])
             {
                 max = right;
             }
@@ -42,32 +42,32 @@ namespace sorting_algorithms
                 auto a = vector_list.begin() + i;
                 auto b = vector_list.begin() + max;
                 std::iter_swap(a, b);
-                Heapify(vector_list, max);
+                heapify(vector_list, max);
             }
         }
 
     public:
 
-        explicit heap_sort(int size)
+        explicit Heap_Sort(const int size)
         {
-            this->size = size;
+            this->size_ = size;
         }
 
-        void HeapSort(std::vector<int> &vector_list)
+        void heap_sort(std::vector<int> &vector_list)
         {
-            BuildMaxHeap(vector_list);
-            for (int i = size; i >= 0; i--)
+            build_max_heap(vector_list);
+            for (int i = size_; i >= 0; i--)
             {
                 std::iter_swap(vector_list.begin(), vector_list.begin() + i);
-                size--;
-                Heapify(vector_list, 0);
+                size_--;
+                heapify(vector_list, 0);
             }
         }
 
 
     };
 
-    std::vector<int> HeapSortFunc(std::vector<int> vector_list, int amount);
+    void heap_sort_func(std::vector<int> &vector_list, int amount);
 
 }
 

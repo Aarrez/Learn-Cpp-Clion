@@ -1,14 +1,13 @@
 #include "HeapSort.h"
 
-namespace sorting_algorithms
+namespace sorting_Algorithms
 {
-    std::vector<int> HeapSortFunc(std::vector<int> vector_list, int amount)
+    void heap_sort_func(std::vector<int> &vector_list, int amount)
     {
-        heap_sort heapSort(amount);
+        Heap_Sort heapSort(amount);
 
-        heapSort.HeapSort(vector_list);
+        heapSort.heap_sort(vector_list);
 
-        return vector_list;
     }
 }
 

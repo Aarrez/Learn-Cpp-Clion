@@ -3,7 +3,7 @@
 #include <vector>
 #include <algorithm>
 
-namespace sorting_algorithms
+namespace sorting_Algorithms
 {
     class BubbleSort
     {
@@ -27,7 +27,7 @@ namespace sorting_algorithms
         }
     };
 
-    std::vector<int> BubbleSortFunc(std::vector<int> vector_list);
+    void bubble_sort_func(std::vector<int> &vector_list);
 }
 
 

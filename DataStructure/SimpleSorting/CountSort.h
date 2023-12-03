@@ -2,7 +2,7 @@
 #define LEARNINGCPP_COUNTSORT_H
 #include <vector>
 
-namespace sorting_algorithms
+namespace sorting_Algorithms
 {
     class countSort
     {
@@ -35,7 +35,7 @@ namespace sorting_algorithms
 
     };
 
-    std::vector<int> CountSortFunc(std::vector<int> vector_list, int amount);
+    void count_sort_func(std::vector<int> &vector_list, int amount);
 }
 
 #endif //LEARNINGCPP_COUNTSORT_H

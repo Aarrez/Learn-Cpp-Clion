@@ -3,7 +3,7 @@
 #include <vector>
 #include <random>
 
-namespace sorting_algorithms
+namespace sorting_Algorithms
 {
     class MergeSort{
         static std::vector<int> merge(std::vector<int> &left, std::vector<int> &right)
@@ -57,7 +57,7 @@ namespace sorting_algorithms
         }
     };
 
-    std::vector<int> MergeSortFunc(std::vector<int> vector_list);
+    void merge_sort_func(std::vector<int> &vector_list);
 
 }
 #endif //LEARNINGCPP_MERGESORT_H

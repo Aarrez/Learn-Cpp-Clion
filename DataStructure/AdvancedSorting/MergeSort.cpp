@@ -1,13 +1,11 @@
 #include "MergeSort.h"
 #include <iostream>
 
-namespace sorting_algorithms
+namespace sorting_Algorithms
 {
-    std::vector<int> MergeSortFunc(std::vector<int> vector_list)
+    void merge_sort_func(std::vector<int> &vector_list)
     {
         std::vector<int> result = MergeSort::top_merge_sort(vector_list);
-
-        return result;
     }
 
 }

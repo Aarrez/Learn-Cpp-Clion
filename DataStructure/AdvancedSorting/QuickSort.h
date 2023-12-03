@@ -2,7 +2,7 @@
 #define QUICKSORT_H
 #include <vector>
 
-namespace sorting_algorithms
+namespace sorting_Algorithms
 {
     class QSort
     {
@@ -47,7 +47,7 @@ namespace sorting_algorithms
         }
     };
 
-    std::vector<int> QuickSortFunc(std::vector<int> vector_list, int &amount);
+    void quick_sort_func(std::vector<int> &vector_list, int amount);
 
 }
 

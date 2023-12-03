@@ -8,7 +8,6 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(SortingAlgorithms
         DataStructure/main.h
-        DataStructure/UnsortedVector.h
 
         DataStructure/SimpleSorting/BubbleSort.cpp
         DataStructure/SimpleSorting/BubbleSort.h
