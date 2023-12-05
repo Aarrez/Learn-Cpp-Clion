@@ -1,7 +1,6 @@
 #include "GraphImport.h"
 #include <iostream>
 #include <fstream>
-#include <memory>
 
 namespace graph_space
 {
@@ -40,6 +39,7 @@ namespace graph_space
                     id++;
                     if(i == xlenth)
                     {
+                        temp->isedge = true;
                         i = 0;
                         j++;
                     }
@@ -53,6 +53,7 @@ namespace graph_space
                     id++;
                     if(i == xlenth)
                     {
+                        temp->isedge = true;
                         i = 0;
                         j++;
                     }
@@ -74,18 +75,21 @@ namespace graph_space
             int y = nodelist[i]->position.y;
             int x = nodelist[i]->position.x;
             int j = i + 1;
-            if(nodelist[j]->isblocker) continue;
-            if(x != 9)
+            if(!nodelist[j]->isblocker)
             {
-                nodelist[i]->adjecent.push_back(nodelist[j]);
-                nodelist[j]->adjecent.push_back(nodelist[i]);
+                if(!nodelist[i]->isedge)
+                {
+                    nodelist[i]->adjecent.push_back(nodelist[j]);
+                    nodelist[j]->adjecent.push_back(nodelist[i]);
+                }
             }
+
             if(y > 0)
             {
                 int a = x;
                 if(y > 1)
                 {
-                    a = x + (y * 20)-1;
+                    a = x + ((y-1) * 20);
                 }
                 if(nodelist[a]->isblocker) continue;
                 nodelist[a]->adjecent.push_back(nodelist[i]);

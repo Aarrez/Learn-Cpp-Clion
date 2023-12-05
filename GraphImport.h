@@ -14,6 +14,7 @@ namespace graph_space
         int id {0};
         bool isblocker {false};
         bool explored {false};
+        bool isedge {false};
         std::vector<std::shared_ptr<node>> adjecent;
         vector2 position {0, 0};
     };

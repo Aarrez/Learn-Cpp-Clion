@@ -6,9 +6,12 @@ namespace graph_space
     class search_algorithms
     {
     public:
-        void searchastar(node* first, node* goal);
-        void searchbreadthfirst(node* first, node* goal);
-        void searchdepthfirst(node* first, node* goal);
+        static std::shared_ptr<node> searchbreadthfirst(std::shared_ptr<node> &first, std::shared_ptr<node> &goal);
+        static std::shared_ptr<node> searchbreadthfirst(std::vector<std::shared_ptr<node>> &nodelist, int firstid, int goalid);
+
+        static int searchdepthfirst(const std::shared_ptr<node> &first);
+
+        static int searchdepthfirst(std::vector<std::shared_ptr<node>> &nodelist, int fisrtid);
     };
 
 }
