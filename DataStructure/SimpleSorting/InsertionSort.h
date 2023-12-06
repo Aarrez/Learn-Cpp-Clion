@@ -7,7 +7,7 @@ namespace sorting_algorithms
     class InsertionSort
     {
     public:
-        static void SortVector(std::vector<int> &vector_list)
+        static void sort_Vector(std::vector<int> &vector_list)
         {
             for(unsigned long i = 0; i < vector_list.size(); i++)
             {
@@ -22,7 +22,6 @@ namespace sorting_algorithms
             }
         };
     };
-
     void insertion_sort_func(std::vector<int> &vector_list);
 }
 
