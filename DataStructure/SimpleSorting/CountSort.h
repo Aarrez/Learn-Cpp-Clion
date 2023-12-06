@@ -2,7 +2,7 @@
 #define LEARNINGCPP_COUNTSORT_H
 #include <vector>
 
-namespace sorting_Algorithms
+namespace sorting_algorithms
 {
     class countSort
     {

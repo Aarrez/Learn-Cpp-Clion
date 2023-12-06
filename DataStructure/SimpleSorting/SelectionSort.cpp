@@ -1,6 +1,6 @@
 #include "SelectionSort.h"
 
-namespace sorting_Algorithms
+namespace sorting_algorithms
 {
     void selection_sort_func(std::vector<int> &vector_list)
     {

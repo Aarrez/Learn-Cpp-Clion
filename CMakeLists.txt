@@ -18,7 +18,6 @@ add_executable(SortingAlgorithms
         DataStructure/SimpleSorting/SelectionSort.cpp
         DataStructure/SimpleSorting/SelectionSort.h
 
-
         DataStructure/AdvancedSorting/HeapSort.cpp
         DataStructure/AdvancedSorting/HeapSort.h
         DataStructure/AdvancedSorting/MergeSort.cpp

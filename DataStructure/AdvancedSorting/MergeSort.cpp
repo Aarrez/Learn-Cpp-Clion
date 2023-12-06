@@ -1,7 +1,7 @@
 #include "MergeSort.h"
 #include <iostream>
 
-namespace sorting_Algorithms
+namespace sorting_algorithms
 {
     void merge_sort_func(std::vector<int> &vector_list)
     {
