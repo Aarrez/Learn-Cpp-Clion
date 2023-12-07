@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 
-namespace graph_space
+namespace graph_Space
 {
     std::vector<std::shared_ptr<node>> graphimport()
     {

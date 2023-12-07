@@ -2,7 +2,7 @@
 #define GRAPHIMPORT_H
 #include <vector>
 
-namespace graph_space
+namespace graph_Space
 {
     struct vector2
     {
