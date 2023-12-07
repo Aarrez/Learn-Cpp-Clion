@@ -60,7 +60,18 @@ inline void create_table_content
         max_table[i].push_back(max);
         min_table[i].push_back(min);
         auto sorted_keeper {insertion_sort(time_keeper[i])};
-        double median = sorted_keeper.size()/2;
+        double median;
+        if((sorted_keeper.size() % 2) == 0)
+        {
+            median = sorted_keeper.size()/2;
+        }
+        else
+        {
+            double f = std::floor(sorted_keeper.size()/2.0);
+            double s = std::ceil(sorted_keeper.size()/2.0);
+            median = (s + f)/ 2.0;
+        }
+
         median = time_keeper[i][median].count();
         median_table[i].push_back(median);
 
