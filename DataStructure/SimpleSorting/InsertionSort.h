@@ -14,9 +14,9 @@ namespace sorting_algorithms
                 unsigned long j = i;
                 while (j > 0 && vector_list[j] > vector_list[j-1])
                 {
-                    int a = vector_list[j];
-                    vector_list[j] = vector_list[j-1];
-                    vector_list[j-1] = a;
+                    auto a = vector_list.begin() + j;
+                    auto b = vector_list.begin() + (j -1);
+                    std::iter_swap(a, b);
                     j--;
                 }
             }
