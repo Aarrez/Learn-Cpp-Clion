@@ -8,5 +8,6 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 add_executable(GraphProject
         GraphImport.cpp
         GraphImport.h
+        GraphTreversal.h
         GraphTreversal.cpp
 )
