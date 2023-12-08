@@ -46,7 +46,7 @@ inline void create_table_content
     {
         double sum {0};
         // std::cout << "size: " << two_vector[i].size() << std::endl;
-        for (int j = 0; j < two_vector[i].size()-1; ++j)
+        for (int j = 0; j < two_vector[i].size(); ++j)
         {
             auto duration = time_keeper[i][j];
             double a = duration.count();
