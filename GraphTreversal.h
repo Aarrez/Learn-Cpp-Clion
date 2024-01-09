@@ -2,7 +2,6 @@
 #define GRAPHTREVERSAL_H
 #include "main.h"
 #include <iostream>
-#include <map>
 #include <queue>
 #include <stack>
 
@@ -49,44 +48,5 @@ std::vector<double> Mesure_sorting(
     }
     return duration_list;
 }
-
-class Depth
-{
-    std::shared_ptr<node> Search_depth_first
-(std::vector<std::shared_ptr<node>> &nodelist, const std::shared_ptr<node> &first, const std::shared_ptr<node> &goal)
-    {
-        std::stack<std::shared_ptr<node>> iternodestack;
-        iternodestack.push(first);
-        iternodestack.top()->explored = true;
-        while(!iternodestack.empty())
-        {
-            for(auto & b : iternodestack.top()->adjecent)
-            {
-                for(auto a = b->adjecent.begin(); a < b->adjecent.end(); ++a)
-                {
-                    auto n = *a;
-                    if(n->id == goal->id)
-                    {
-                        for(auto & no : nodelist)
-                        {
-                            n->explored = false;
-                        }
-                        return n;
-                    }
-                    if(!n->explored)
-                    {
-                        n->explored = true;
-                        std::cout << n->id << std::endl;
-                        iternodestack.push(n);
-                    }
-                }
-            }
-            iternodestack.pop();
-        }
-
-        std::cerr << "Depth first could not find: " << goal->id << std::endl;
-        return first;
-    }
-};
 
 #endif //GRAPHTREVERSAL_H

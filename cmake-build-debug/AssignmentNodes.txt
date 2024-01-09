@@ -1,20 +1,20 @@
-oooooooXooooooXooooo
-ooooXoooooooooXooooo
-oooooooXoooooooooooo
-XXXXXXXXooooooXooooo
-oooooooXXXXXXXXooooo
-oooooooXooooooXXXoXX
-ooooooooooooooXooooo
-oooooooXooooooXooooo
-oooooooXoooooooooooo
-oooooooXXXXXXXXooooo
-oooooooXooooooXooooo
-ooooooooooooooXooooo
-oooooooXoooooooooooo
-XXoXXXXXooooooXooooo
-oooooooXXXXXXXXooooo
-oooooooXooooooXXXXXX
-ooooooooooooooXooooo
-oooooooXooooooXooooo
-oooooooXoooooooooooo
-oooooooXooooooXooooo
+0   oooooooXooooooXooooo 19
+20  ooooXoooooooooXooooo 39
+40  oooooooXoooooooooooo 59
+60  XXXXXXXXooooooXooooo 79
+80  oooooooXXXXXXXXooooo 99
+100 oooooooXooooooXXXoXX 119
+120 ooooooooooooooXooooo 139
+140 oooooooXooooooXooooo 159
+160 oooooooXoooooooooooo 179
+180 oooooooXXXXXXXXooooo 199
+200 oooooooXooooooXooooo 219
+220 ooooooooooooooXooooo 239
+240 oooooooXoooooooooooo 259
+260 XXoXXXXXooooooXooooo 279
+280 oooooooXXXXXXXXooooo 299
+300 oooooooXooooooXXXXXX 319
+320 ooooooooooooooXooooo 339
+340 oooooooXooooooXooooo 359
+360 oooooooXoooooooooooo 379
+380 oooooooXooooooXooooo 399

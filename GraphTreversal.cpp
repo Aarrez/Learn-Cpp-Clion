@@ -40,35 +40,40 @@ std::shared_ptr<node> Search_breadth_first
 }
 
 void Search_depth_first
-(std::vector<std::shared_ptr<node>> &nodelist, const std::shared_ptr<node> &first, const std::shared_ptr<node> &goal, bool &goalfound)
+(std::vector<std::shared_ptr<node>> &nodelist, const std::shared_ptr<node> &first, const std::shared_ptr<node> &goal)
 {
-    first->explored = true;
+    std::stack<std::shared_ptr<node>> iternodestack;
+    std::stack<std::shared_ptr<node>> adjnodestack;
+    iternodestack.push(first);
+    iternodestack.top()->explored = true;
+    while(!iternodestack.empty())
+    {
+        for(auto & b : iternodestack.top()->adjecent)
+        {
+            if(b->id == goal->id)
+            {
+                for(auto & no : nodelist)
+                {
+                    no->explored = false;
+                }
+                return;
+            }
+            if(!b->explored)
+            {
+                b->explored = true;
+                // std::cout << b->id << std::endl;
+                adjnodestack.push(b);
+            }
+        }
+        iternodestack.pop();
+        for(int i = 0; i < adjnodestack.size() - 1; i++)
+        {
+            iternodestack.push(adjnodestack.top());
+            adjnodestack.pop();
+        }
+    }
 
-    if(goalfound)
-    {
-        return;
-    }
-    if(first->id == goal->id)
-    {
-        for(auto & n : nodelist)
-        {
-            n->explored = false;
-        }
-        goalfound = true;
-        std::cout << "Goal found: " << first->id<< std::endl;
-        return;
-    }
-    for(auto & neibor : first->adjecent)
-    {
-        if(!neibor->explored)
-        {
-            Search_depth_first(nodelist, neibor, goal, goalfound);
-        }
-        if(goalfound)
-        {
-            return;
-        }
-    }
+    std::cerr << "Depth first could not find: " << goal->id << std::endl;
 }
 
 double Distance(const vector2 first, const vector2 last)
@@ -194,7 +199,7 @@ int main()
     }
     std::cout << "Depth search: " << std::endl;
     auto depth = Mesure_sorting(arrsize, astarlist ,startnodes, goalnodes, Search_depth_first);
-    for(auto const value : astar)
+    for(auto const value : depth)
     {
         std::cout << "Time in seconds: "<< value << std::endl;
     }
